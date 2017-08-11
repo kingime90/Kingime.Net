@@ -1,0 +1,23 @@
+using Kingime.Net.DataAccess.General;
+using Kingime.Net.Entity;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Kingime.Net.DataAccess.IRepository
+{
+    /// <summary>
+    /// 
+    /// </summary>
+    public interface IUserRepository : IRepository<User>
+    {
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="username"></param>
+        /// <returns></returns>
+        User GetByUsername(string username);
+    }
+}

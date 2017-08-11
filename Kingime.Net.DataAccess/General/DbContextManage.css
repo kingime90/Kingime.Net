@@ -1,0 +1,37 @@
+using System;
+using System.Collections.Generic;
+using System.Data.Entity;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Kingime.Net.DataAccess.General
+{
+    /// <summary>
+    /// 数据库上下文管理
+    /// </summary>
+    public class DbContextManage
+    {
+        private static Func<DbContext> _dbContext;
+
+        /// <summary>
+        /// 数据库上下文
+        /// </summary>
+        public static Func<DbContext> DbContext
+        {
+            get
+            {
+                return _dbContext;
+            }
+        }
+
+        /// <summary>
+        /// 注册数据库上下文
+        /// </summary>
+        /// <param name="workContext"></param>
+        public static void RegisterDbContext(Func<DbContext> dbContext)
+        {
+            _dbContext = dbContext;
+        }
+    }
+}

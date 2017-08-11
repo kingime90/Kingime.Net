@@ -1,0 +1,5 @@
+C:\Kingime\Tester\2017\Kingime.Net_Per\Kingime.Net\Kingime.Net.Entity\bin\Debug\Kingime.Net.Entity.dll
+C:\Kingime\Tester\2017\Kingime.Net_Per\Kingime.Net\Kingime.Net.Entity\bin\Debug\Kingime.Net.Entity.pdb
+C:\Kingime\Tester\2017\Kingime.Net_Per\Kingime.Net\Kingime.Net.Entity\obj\Debug\Kingime.Net.Entity.csprojResolveAssemblyReference.cache
+C:\Kingime\Tester\2017\Kingime.Net_Per\Kingime.Net\Kingime.Net.Entity\obj\Debug\Kingime.Net.Entity.dll
+C:\Kingime\Tester\2017\Kingime.Net_Per\Kingime.Net\Kingime.Net.Entity\obj\Debug\Kingime.Net.Entity.pdb

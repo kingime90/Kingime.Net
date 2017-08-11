@@ -1,0 +1,62 @@
+using Kingime.Net.Entity.General;
+using System;
+using System.Collections.Generic;
+using System.Data.Entity;
+
+namespace Kingime.Net.DataAccess.General
+{
+    /// <summary>
+    /// 数据单元上下文接口
+    /// </summary>
+    public interface IUnitOfWorkContext : IUnitOfWork, IDisposable
+    {
+        /// <summary>
+        /// 获取数据实体集合
+        /// </summary>
+        /// <typeparam name="TEntity"></typeparam>
+        /// <returns></returns>
+        DbSet<TEntity> Set<TEntity>() where TEntity : class, IEntity;
+
+        /// <summary>
+        /// 注册新的单个对象到仓储上下文中
+        /// </summary>
+        /// <typeparam name="TEntity"></typeparam>
+        /// <param name="entity"></param>
+        void RegisterNew<TEntity>(TEntity entity) where TEntity : class, IEntity;
+
+        /// <summary>
+        /// 注册新的数据集合对象到仓储上下文中
+        /// </summary>
+        /// <typeparam name="TEntity"></typeparam>
+        /// <param name="entities"></param>
+        void RegisterNew<TEntity>(IEnumerable<TEntity> entities) where TEntity : class, IEntity;
+
+        /// <summary>
+        /// 注册单个更改的对象到仓储上下文中
+        /// </summary>
+        /// <typeparam name="TEntity"></typeparam>
+        /// <param name="entity"></param>
+        void RegisterModified<TEntity>(TEntity entity) where TEntity : class, IEntity;
+
+        /// <summary>
+        /// 注册更改的数据集合对象到仓储上下文中
+        /// </summary>
+        /// <typeparam name="TEntity"></typeparam>
+        /// <param name="entities"></param>
+        void RegisterModified<TEntity>(IEnumerable<TEntity> entities) where TEntity : class, IEntity;
+
+        /// <summary>
+        /// 注册单个删除的对象到仓储上下文中
+        /// </summary>
+        /// <typeparam name="TEntity"></typeparam>
+        /// <param name="entity"></param>
+        void RegisterDeleted<TEntity>(TEntity entity) where TEntity : class, IEntity;
+
+        /// <summary>
+        /// 注册删除的数据集合对象到仓储上下文中
+        /// </summary>
+        /// <typeparam name="TEntity"></typeparam>
+        /// <param name="entities"></param>
+        void RegisterDeleted<TEntity>(IEnumerable<TEntity> entities) where TEntity : class, IEntity;
+    }
+}

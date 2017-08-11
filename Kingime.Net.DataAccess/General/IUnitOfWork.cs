@@ -1,0 +1,26 @@
+﻿using Kingime.Net.Core.General;
+
+namespace Kingime.Net.DataAccess.General
+{
+    /// <summary>
+    /// 业务单元接口
+    /// </summary>
+    public interface IUnitOfWork : IDependency
+    {
+        /// <summary>
+        /// 当前业务单元是否已被提交
+        /// </summary>
+        bool IsCommitted { get; }
+
+        /// <summary>
+        /// 提交
+        /// </summary>
+        /// <returns></returns>
+        int Commit();
+
+        /// <summary>
+        /// 当前业务单元回滚到未提交
+        /// </summary>
+        void Rollback();
+    }
+}
